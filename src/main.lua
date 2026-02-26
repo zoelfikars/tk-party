@@ -1,8 +1,8 @@
 -- ============================================
 -- TKPartyHub Modular v2.0 (Clean Remake)
 -- ============================================
-local baseUrl = "https://erp-novel-limitations-ways.trycloudflare.com/src/"
--- local baseUrl = "https://raw.githubusercontent.com/zoelfikars/tk-party/main/src/"
+-- local baseUrl = "https://erp-novel-limitations-ways.trycloudflare.com/src/"
+local baseUrl = "https://raw.githubusercontent.com/zoelfikars/tk-party/main/src/"
 
 _G.TKPartyHub = _G.TKPartyHub or {}
 
