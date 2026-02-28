@@ -12,11 +12,11 @@ local Window = nil -- Simpan instance window secara lokal
 
 function MainWindow.create()
 
-    -- Load Library Rayfield (External)
-    local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+    -- Load Custom UI Library
+    local CustomUI = requireRemote("ui/lib/custom-ui")
 
     -- Inisialisasi Window
-    Window = Rayfield:CreateWindow({
+    Window = CustomUI:CreateWindow({
         Name = "TKPartyHub v2",
         LoadingTitle = "Mengunduh Konfigurasi...",
         LoadingText = "User: " .. Services.LocalPlayer.Name,
@@ -49,14 +49,14 @@ function MainWindow.create()
         end
         if MiscTab and MiscTab.setup then MiscTab.setup(Misc) end
 
-        Rayfield:Notify({
+        CustomUI:Notify({
             Title = "TKPartyHub Loaded",
             Content = "Sistem Modular Berhasil Dijalankan.",
             Duration = 5
         })
 
     else
-        warn("❌ Gagal membuat Window Rayfield!")
+        warn("❌ Gagal membuat Window Custom UI!")
     end
 
     return Window

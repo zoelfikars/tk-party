@@ -36,7 +36,8 @@ function TeleportTab.setup(tabInstance)
         local list = {}
         for _, player in pairs(Services.Players:GetPlayers()) do
             if player ~= Services.LocalPlayer then
-                table.insert(list, player.Name)
+                local nameDisplay = string.format("%s (@%s)", player.DisplayName, player.Name)
+                table.insert(list, nameDisplay)
             end
         end
         return list

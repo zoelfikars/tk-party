@@ -1,10 +1,12 @@
 -- ============================================
 -- TKPartyHub Modular v2.0 (Clean Remake)
 -- ============================================
--- local baseUrl = "https://erp-novel-limitations-ways.trycloudflare.com/src/"
+-- local baseUrl =
+--     "https://roulette-federation-league-space.trycloudflare.com/src/"
 local baseUrl = "https://raw.githubusercontent.com/zoelfikars/tk-party/main/src/"
 
 _G.TKPartyHub = _G.TKPartyHub or {}
+_G.TKPartyHub.baseUrl = baseUrl
 
 -- CUSTOM LOADER: Menggantikan require standar agar bisa baca folder Ubuntu
 _G.TKPartyHub.require = function(path)
