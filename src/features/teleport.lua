@@ -32,7 +32,7 @@ function Teleport.toPlayer(targetPlayerName)
             print("[TKPartyHub] Teleported to player: " .. targetPlayerName)
         end
     else
-        warn("[TKPartyHub] Player tidak ditemukan atau karakter belum load")
+        warn("[TKPartyHub] Player tidak ditemukan atau karakter belum load " .. targetPlayerName)
     end
 end
 
