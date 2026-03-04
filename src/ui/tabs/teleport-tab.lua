@@ -49,7 +49,15 @@ function TeleportTab.setup(tabInstance)
         CurrentOption = "",
         MultipleOptions = false,
         Flag = "PlayerTeleportDropdown",
-        Callback = function(Option) Teleport.toPlayer(Option[1]) end
+        Callback = function(Option) 
+            local selectedText = Option[1]
+            local actualUsername = string.match(selectedText, "%(@(.-)%)")
+            if actualUsername then
+                Teleport.toPlayer(actualUsername)
+            else
+                Teleport.toPlayer(selectedText)
+            end
+        end
     })
 
     -- Tombol Refresh Daftar Player
